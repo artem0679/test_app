@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="container mt-5">
+    <table class="table table-striped">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Производитель</th>
+          <th scope="col">Колчиство выпущенной продукции (тонн)</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        {% if users %}
+        {% for user in users %}
+        <tr>
+          <th scope="row">{{loop.index}}</th>
+          <td>{{ user.login }}</td>
+          <td>{{ user.count_of_prod }}</td>
+        </tr>
+        {% endfor %}
+        {% endif %}
+      </tbody>
+    </table>
+  </div>
+{% endblock %}
