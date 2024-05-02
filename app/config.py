@@ -6,7 +6,7 @@ params = {
     "username": "root",
     "password": "root",
     "db_name": "academic_performance1",
-    "db_url": "localhost",
+    "db_url": "192.168.3.2",
 }
 
 SQLALCHEMY_DATABASE_URI = f'mysql+mysqlconnector://{params.get("username")}:{params.get("password")}@{params.get("db_url")}/{params.get("db_name")}'
